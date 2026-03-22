@@ -11,6 +11,8 @@ func Hello(name string) (string, error) {
 		return "", errors.New("empty name")
 	}
 	message := fmt.Sprintf(randomFormat(), name)
+	// fail test
+	//message := fmt.Sprintf(randomFormat())
 	return message, nil
 }
 func Hellos(names []string) (map[string]string, error) {
@@ -23,6 +25,7 @@ func Hellos(names []string) (map[string]string, error) {
 		messages[name] = message
 	}
 	return messages, nil
+
 }
 
 func randomFormat() string {
